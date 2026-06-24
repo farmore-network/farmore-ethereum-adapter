@@ -1,0 +1,20 @@
+# Rust
+/target/
+**/*.rs.bk
+
+# Library crate: lockfile is not committed (binaries pin it). See README.
+Cargo.lock
+
+# Local cross-repo dev override (documented; never committed)
+.cargo/config.toml
+
+# Secrets — never commit
+.env
+*.env
+!.env.example
+*.key
+*.pem
+*keystore*
+
+# OS
+.DS_Store

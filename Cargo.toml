@@ -1,0 +1,35 @@
+[package]
+name = "farmore-ethereum-adapter"
+description = "Reference EVM implementation of the Farmore ChainAdapter trait (Ethereum, Base, and other EVM chains), plus home-chain contract bindings. The template for third-party farmore-<chain>-adapter crates."
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.91"
+license = "MIT"
+authors = ["Farmore"]
+repository = "https://github.com/farmore-network/farmore-ethereum-adapter"
+homepage = "https://farmore.network"
+keywords = ["farmore", "ethereum", "base", "evm", "cross-chain"]
+categories = ["cryptography::cryptocurrencies"]
+readme = "README.md"
+
+[lib]
+name = "farmore_ethereum_adapter"
+
+[dependencies]
+# Cross-repo dependency on the frozen core trait, pinned by version. The path builds
+# against the sibling checkout for local cross-stack dev; on `cargo publish` the path is
+# dropped and the version resolves from the registry. For consumers without a sibling
+# checkout, depend on the published crate (`farmore-core = "0.1"`) or the pinned git tag —
+# see README.
+farmore-core = { path = "../farmore-core", version = "0.1.0" }
+
+alloy = { version = "1.0", features = ["full", "node-bindings", "signer-local"] }
+alloy-primitives = "1.0"
+async-trait = "0.1"
+thiserror = "2"
+anyhow = "1"
+tracing = "0.1"
+tokio = { version = "1", features = ["full"] }
+
+[dev-dependencies]
+serde_json = "1"

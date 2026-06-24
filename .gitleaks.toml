@@ -1,0 +1,19 @@
+# gitleaks configuration — extends the default ruleset.
+# This crate contains no secrets; the config exists so the CI gate and the pre-commit
+# hook share one policy across all Farmore repos.
+title = "Farmore gitleaks policy"
+
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Build artifacts and vendored dependencies (gitignored, never committed)"
+paths = [
+  "(^|/)target/",
+  "(^|/)out/",
+  "(^|/)cache/",
+  "(^|/)broadcast/",
+  "(^|/)dependencies/",
+  "(^|/)node_modules/",
+  "(^|/)dist/",
+]
