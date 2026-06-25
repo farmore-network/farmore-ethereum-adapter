@@ -1,5 +1,8 @@
 # farmore-ethereum-adapter
 
+> **Status: mainnet is not live yet.** Farmore is in pre-mainnet development (testnet at
+> Stage 2).
+
 The **reference EVM adapter** for [Farmore](https://farmore.network) — the implementation
 of the [`farmore-core`](https://github.com/farmore-network/farmore-core) `ChainAdapter`
 trait for Ethereum, Base, and other EVM chains. It also ships the typed home-chain
