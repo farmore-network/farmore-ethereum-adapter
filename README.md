@@ -3,7 +3,7 @@
 > **Status: mainnet is not live yet.** Farmore is in pre-mainnet development (testnet at
 > Stage 2).
 
-The **reference EVM adapter** for [Farmore](https://farmore.network) — the implementation
+The **reference EVM adapter** for [Farmore](https://farmore.network), the implementation
 of the [`farmore-core`](https://github.com/farmore-network/farmore-core) `ChainAdapter`
 trait for Ethereum, Base, and other EVM chains. It also ships the typed home-chain
 contract bindings (`ISettlement`, `INamespace`, `IBondVault`, ERC-20) used by the node and
@@ -11,7 +11,7 @@ resolver. Built on [`alloy`](https://github.com/alloy-rs/alloy).
 
 This crate is the **template** a third-party `farmore-<chain>-adapter` copies: it shows how
 to front recipients from the operator's own account (`Settler`), verify fills to finality
-(`Verifier`), and declare capabilities (`Capable`) — all behind the chain-neutral trait.
+(`Verifier`), and declare capabilities (`Capable`), all behind the chain-neutral trait.
 
 ## Use it
 
